@@ -1,0 +1,29 @@
+html {
+	margin: 0;
+	padding: 0;
+	background-color: gainsboro;
+}
+
+body {
+	margin: 2em auto;
+	width: 75%;
+	padding: 2em;
+	border-radius: 10px;
+	min-height: 970px;
+	background-color: whitesmoke;
+}
+
+
+h1 {
+	font-family: 'Parisienne';
+	text-align: center;
+	font-size: 3em;
+}
+
+.featured {
+	max-width: 400px;
+	display: block;
+	margin: 0 auto;
+	border: 20px solid white;
+	border-radius: 5px;
+}
