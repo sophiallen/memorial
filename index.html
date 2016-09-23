@@ -8,7 +8,11 @@
     <title>Julia Marian Blaszcak</title>
 
     <link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
-    <link rel="stylscheet" href="js/blueberry.css"/>
+<!--     <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+ -->    
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <link  href="js/fotorama/fotorama.css" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
@@ -19,27 +23,31 @@
   <![endif]-->
 </head>
 <body>
+  <nav>
+    <ul>
+      <li><a href="biography.html">Biography</a></li>
+      <li><a href="album.html">Photo Album</a></li>
+      <li><a href="#">Memories</a></li>
+    </ul>
+  </nav>
   <main>
     <h1>Julia Marian  Blaszcak</h1>
-    <img  class="featured" src="images/navyPortrait.jpg" alt="Portrait of Julia"/>
-<!--     <div class="blueberry">
-      <ul class="slides">
-        <li><img src="images/"></li>
-      </li>
-    </div> -->
+    <div class="slideshow">
+        <div class="fotorama"
+         data-arrows="false" data-autoplay="6000" 
+         data-transition="crossfade" data-maxwidth="350px"
+         data-transitionduration="1000" data-loop="true">
+            <img src="images/navyPortrait.jpg"/>
+            <img src="images/beachDance.jpg"/>
+            <img src="images/withSophieAndRose.jpg">
+            <img src="images/nursingPamphlet.jpg"/>
+        </div>
+      </div> <!--end slideshow-->
   </main>
 
 
-
-
-  <!-- Photo Carousel -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-  <script src="js/jquery.blueberry.js"></script>
-
-  <script>
-  $(window).load(function() {
-    $('.blueberry').blueberry();
-  });
-  </script>
+<!-- 1. Link to jQuery (1.8 or later), -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/fotorama/fotorama.js"></script> <!-- 16 KB -->
 </body>
 </html>
