@@ -246,6 +246,7 @@ div.flipPhoto:hover {
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
+	border: 1px solid gainsboro;
 }
 
 .back p {
