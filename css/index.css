@@ -170,6 +170,7 @@ div.memory {
 	min-height: 200px;
 	display: inline-block;
 	background-color: lavender;
+	background-image: url('../images/paperBg1.jpg');
 	border: 2px solid gray;
 	margin: 1em;
 	padding: 1em;
