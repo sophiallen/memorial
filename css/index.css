@@ -165,14 +165,90 @@ ul.subnav {
 
 
 /**MEMORIES PAGE**/
-div.memory {
-	width: 300px;
-	min-height: 200px;
-	display: inline-block;
-	background-color: lavender;
-	background-image: url('../images/paperBg1.jpg');
-	border: 2px solid gray;
-	margin: 1em;
-	padding: 1em;
+div.memory-contain {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
+div.memory {
+	max-width: 55%;
+	min-height: 200px;
+	display: inline-block;
+	background-color: rgba(238, 225, 191, 0.75);
+/*	background-image: url('../images/paperBg4.jpg');
+*/	margin: 1em;
+	padding: 1em 2em;
+}
+
+div.memory-sm {
+	max-width: 300px;
+}
+
+.memory-contain .memory h2 {
+	margin-top: 0.25em;
+	margin-bottom: 0em;
+}
+
+.memory-contain div.flipPhoto {
+	margin: 1em;
+}
+
+
+/**FLIP-PHOTOS**/
+/* entire container, keeps perspective */
+.flipPhoto {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flipPhoto.flipped .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flipPhoto.large-photo,.flipPhoto.large-photo .front,.flipPhoto.large-photo .back {
+	width: 300px;
+	height: 250px;
+}
+
+.flipPhoto.small-photo,.flipPhoto.small-photo .front,.flipPhoto.small-photo .back {
+	width: 175px;
+	height: 250px;
+}
+
+div.flipPhoto:hover {
+	cursor: pointer;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	background-color: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+
+.back p {
+	padding: 2em;
+	font-style: italic;
+}

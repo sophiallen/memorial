@@ -9,6 +9,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">  
+    <link rel="shortcut icon" href="images/favicon-heart.ico">
 
     <link rel="stylesheet" href="css/index.css" />
 
@@ -23,25 +24,59 @@
     <ul>
       <li><a href="biography.html">Biography</a></li>
       <li><a href="album.html">Photo Album</a></li>
-      <li><a class="current" href="#">Memories</a></li>
+      <li><a class="current" href="memories.html">Memories</a></li>
     </ul>
   </nav>
   <main class="inner">
     <h1>Favorite Memories</h1>
-    <div class="memory">
-      <h2>Memory Title</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan interdum justo, sit amet ultrices est venenatis eget. Quisque euismod nec odio at tincidunt. Etiam eu purus malesuada, aliquam diam non, tincidunt lacus. Proin nec malesuada lectus. Suspendisse aliquet a ante nec vehicula. Phasellus iaculis ut erat vitae facilisis. Suspendisse porta dolor a nisi semper, quis faucibus arcu scelerisque.</p>
-    </div>
-    <div class="memory">
-      <h2>Another Memory</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan interdum justo, sit amet ultrices est venenatis eget. Quisque euismod nec odio at tincidunt. Etiam eu purus malesuada, aliquam diam non, tincidunt lacus. Proin nec malesuada lectus. Suspendisse aliquet a ante nec vehicula. Phasellus iaculis ut erat vitae facilisis. Suspendisse porta dolor a nisi semper, quis faucibus arcu scelerisque.</p>
-    </div>
-    <div class="flipPhoto">
-      <img class="flipPhoto" src="images/gallery/beachDance-sm.jpg"/>
-      <!--back of photo goes here-->
-    </div>
+    <div class="memory-contain">
 
+      <div class="flipPhoto large-photo">
+        <div class="flipper">
+          <div class="front">
+            <img class="flipPhoto" src="images/gallery/beachDance-sm.jpg"/>
+          </div>
+          <div class="back">
+            <p>caption / back of photo</p>
+          </div>
+        </div><!--end flipper-->
+      </div><!--end flipPhoto-->
+
+
+      <div class="memory">
+        <h2>Memory Title</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan interdum justo, sit amet ultrices est venenatis eget. Quisque euismod nec odio at tincidunt. Etiam eu purus malesuada, aliquam diam non, tincidunt lacus. </p>
+        <p>Proin nec malesuada lectus. Suspendisse aliquet a ante nec vehicula. Phasellus iaculis ut erat vitae facilisis. Suspendisse porta dolor a nisi semper, quis faucibus arcu scelerisque.</p>
+      </div>
+        <div class="memory">
+          <h2>Another Memory</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan interdum justo, sit amet ultrices est venenatis eget. Quisque euismod nec odio at tincidunt. Etiam eu purus malesuada, aliquam diam non, tincidunt lacus. Proin nec malesuada lectus. Suspendisse aliquet a ante nec vehicula. Phasellus iaculis ut erat vitae facilisis. Suspendisse porta dolor a nisi semper, quis faucibus arcu scelerisque.</p>
+        </div>
+
+        <div class="flipPhoto small-photo">
+          <div class="flipper">
+            <div class="front">
+              <img class="flipPhoto" src="images/gallery/navyPortrait-sm.jpg"/>
+            </div>
+            <div class="back">
+              <p>caption / back of photo</p>
+            </div>
+          </div><!--end flipper-->
+        </div><!--end flipPhoto-->
+    </div><!--end memory-contain-->
   </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script>
+    $('.flipPhoto').on('click', function(){
+      var isFlipped = $(this).hasClass('flipped');
+      if (isFlipped){
+        $(this).removeClass('flipped');
+      } else {
+        $(this).addClass('flipped');
+      }
+    })
+  </script>
 
 </body>
 </html>
