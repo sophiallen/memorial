@@ -4,6 +4,7 @@ html {
 	background-color: gainsboro;
 	background-image: url('../images/flowersbythesea.jpg');
 	background-size: cover;
+	background-attachment: fixed;
 }
 
 body {
@@ -146,6 +147,7 @@ div.gallery {
 
 main.inner div.gallery img {
 	margin: 1em;
+	max-width: 500px;
 }
 
 ul.subnav {
@@ -164,6 +166,14 @@ ul.subnav {
 	padding: .75em;
 }
 
+.caption {
+	font-style: italic;
+	max-width: 550px;
+	margin: 0 auto;
+	font-family: 'Raleway', calibri;
+	margin-top: 1em;
+	text-align: center;
+}
 
 /**MEMORIES PAGE**/
 div.memory-contain {

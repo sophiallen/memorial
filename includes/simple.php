@@ -43,6 +43,7 @@ if ($response != null && $response->success)
         <h1>Thank You!</h1>
         <p>Your contribution has been sent. Please be patient while our webmaster (i.e. Sophie) adds your stories and suggestions to the site.</p>
         <p>If you have a pressing concern, or spot a bug in the website, please let Sophie know by <a href="mailto:soph.m.allen@gmail.com" target="_top">sending her an email</a>. Thanks!</p>
+        <p>Click <a href="index.html">here</a> to return to Julia's home page.</p>
     </main>    
     <!-- END HTML FEEDBACK -->        
     <?php
@@ -64,7 +65,7 @@ if ($response != null && $response->success)
 	</div>
     <div>
         <label>
-            Relationship to Julia <br /><input type="text" name="Relationship (optional)" placeholder="Ex: Son, Granddaughter, Friend" title="Name is required" tabindex="10" size="44"/>
+            Relationship to Julia <br /><input type="text" name="Relationship" placeholder="Ex: Son, Granddaughter, Friend" title="optional" tabindex="10" size="44"/>
         </label>
     </div>
 	<div>	
@@ -75,13 +76,13 @@ if ($response != null && $response->success)
 	<!-- below change the HTML to your form elements - only 'Name' & 'Email' (above) are significant -->
 	<div>	
 		<label>
-			What would you like to share? <br /><textarea name="story" rows="8" placeholder="Write your memory, recipe, story or anything else you'd like to add to the website." tabindex="30"></textarea>
+			What would you like to share? <br /><textarea name="Content" rows="8" placeholder="Write your memory, recipe, story or anything else you'd like to add to the website." tabindex="30"></textarea>
 		</label>
 	</div>	
     <div>
         <label>
             How should we categorize your contribution?<br/>
-            <select name="category">
+            <select name="Category">
                 <option value="memory">Memory/Story</option>
                 <option value="biography">Biographical Information</option>
                 <option value="recipe">Recipe</option>
@@ -92,7 +93,7 @@ if ($response != null && $response->success)
     <div>
         <label>
             Special Instructions <br/>
-            <textarea name="story" rows="8" placeholder="Write your special instructions here. Ex: 'Please include a link to the photo of her in her white Navy uniform.' Or 'Put the words 'fifteen years old' in bold." tabindex="30"></textarea>
+            <textarea name="Instructions" rows="8" placeholder="Write your special instructions here. Ex: 'Please include a link to the photo of her in her white Navy uniform.' Or 'Put the words 'fifteen years old' in bold." tabindex="30"></textarea>
         </label>
     </div>
 	<div><?=$feedback?></div>
