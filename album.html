@@ -36,11 +36,11 @@
   <main class="inner">
     <h1>Photo Album</h1>
     <ul class="subnav">
-      <li><a href="#" id="filter-none">All</a></li><span>&middot;</span>
-      <li><a href="#" id="filter-career">Career</a></li><span>&middot;</span>
-      <li><a href="#" id="filter-family">Family Life</a></li><span>&middot;</span>
-      <li><a href="#" id="filter-grandkids">Grandchildren</a></li><span>&middot;</span>
-      <li><a href="#" id="filter-etc">Et Cetera</a></li>
+      <li><a href="#" id="none" class="current">All</a></li><span>&middot;</span>
+      <li><a href="#" id="career">Career</a></li><span>&middot;</span>
+      <li><a href="#" id="family">Family Life</a></li><span>&middot;</span>
+      <li><a href="#" id="grandkids">Grandchildren</a></li><span>&middot;</span>
+      <li><a href="#" id="etc">Et Cetera</a></li>
     </ul>
 
     <div class="gallery">
@@ -123,38 +123,24 @@
 
     $('document').ready(function(){
       applyGallery();
+    
+      var unfiltered = $('.gallery a'); 
+      
+       $(".subnav a").click(function(event) {
+         $('.subnav li a.current').removeClass('current');
+         $(event.target).addClass('current');
+         
+         if (event.target.id === 'none'){
+           $('.gallery').html(unfiltered);
+         } else {
+           var className = '.' + event.target.id;
+           var filtered = unfiltered.filter(className);
+           $('.gallery').html(filtered);          
+         }
+         applyGallery();
+       });
 
-      var unfiltered = $('.gallery a');
-      $('#filter-career').on('click', function(){
-        var filtered = unfiltered.filter('.career');
-        $('.gallery').html(filtered);
-        applyGallery();
-      });
-
-      $('#filter-grandkids').on('click', function(){
-        var filtered = unfiltered.filter('.grandkids');
-        $('.gallery').html(filtered);
-        applyGallery();
-      });
-
-      $('#filter-family').on('click', function(){
-        var filtered = unfiltered.filter('.family');
-        $('.gallery').html(filtered);
-        applyGallery();
-      });
-
-      $('#filter-etc').on('click', function(){
-        var filtered = unfiltered.filter('.etc');
-        $('.gallery').html(filtered);
-        applyGallery();
-      });        
-
-      $('#filter-none').on('click', function(){
-        $('.gallery').html(unfiltered);
-        applyGallery();
-      });  
-
-    })
+    });
 </script>
 </body>
 </html>
