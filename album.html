@@ -36,49 +36,69 @@
   <main class="inner">
     <h1>Photo Album</h1>
     <ul class="subnav">
-      <li><a href="#">Career</a></li><span>&middot;</span>
-      <li><a href="#">Family Life</a></li><span>&middot;</span>
-      <li><a href="#">Grandchildren</a></li><span>&middot;</span>
-      <li><a href="#">Et Cetera</a></li>
+      <li><a href="#" id="filter-none">All</a></li><span>&middot;</span>
+      <li><a href="#" id="filter-career">Career</a></li><span>&middot;</span>
+      <li><a href="#" id="filter-family">Family Life</a></li><span>&middot;</span>
+      <li><a href="#" id="filter-grandkids">Grandchildren</a></li><span>&middot;</span>
+      <li><a href="#" id="filter-etc">Et Cetera</a></li>
     </ul>
 
     <div class="gallery">
-      <a class="lightbox" href="images/gallery/beachDance-lg.jpg">
+      <a class="lightbox family" href="images/gallery/beachDance-lg.jpg">
         <img class="captioned" src="images/gallery/beachDance-sm.jpg" alt="I took this photo of my parents, Pete and Marian Blaszcak, in 1980 or 1981, I think, at Trinidad Beach, California (Humboldt County.) I told them to do something instead of just stand there together. They were happy to oblige. -Monica Blaszcak Lelevich"/>
       </a>
-      <a class="lightbox" href="images/gallery/beachBabes-lg.jpg">
+      <a class="lightbox etc" href="images/gallery/beachBabes-lg.jpg">
         <img src="images/gallery/beachBabes-sm.jpg" alt="Navy nurses having fun, Julia is second from the right." />
       </a> 
-      <a class="lightbox" href="images/gallery/pamphlet-lg.jpg">
+      <a class="lightbox career" href="images/gallery/pamphlet-lg.jpg">
         <img src="images/gallery/pamphlet-sm.jpg"/>
       </a>
-      <a class="lightbox" href="images/withSophieAndRose.jpg">
+      <a class="lightbox grandkids" href="images/withSophieAndRose.jpg">
         <img src="images/gallery/withSophieAndRose-sm.jpg" alt="Marian with granddaughters, Sophia and Rose"/>
       </a>
-      <a class="lightbox" href="images/gallery/sisters-lg.jpg">
+      <a class="lightbox career family" href="images/gallery/sisters-lg.jpg">
         <img src="images/gallery/sisters-sm.jpg" alt="Marian (right) and her sister, Monica." />
       </a>      
-      <a class="lightbox" href="images/gallery/cruise-lg.jpg">
+      <a class="lightbox family" href="images/gallery/cruise-lg.jpg">
         <img src="images/gallery/cruise-sm.jpg"/>
       </a>
-      <a class="lightbox" href="images/gallery/yearbook-lg.jpg">
+      <a class="lightbox career" href="images/gallery/yearbook-lg.jpg">
         <img src="images/gallery/yearbook-sm.jpg"/>
       </a>
-      <a class="lightbox" href="images/gallery/icecream-lg.jpg">
+      <a class="lightbox career etc" href="images/gallery/icecream-lg.jpg">
         <img src="images/gallery/icecream-sm.jpg" alt="Marian and fellow nurses take a break, recovering patients can be seen on the porch in the background."/>
       </a>
-      <a class="lightbox" href="images/gallery/meeting-Keller-lg.jpg">
+      <a class="lightbox grandkids" href="images/gallery/meeting-Keller-lg.jpg">
         <img src="images/gallery/meeting-Keller-sm.jpg" alt="Grandson-in-law Kevin introduces Marian to her great-grandson, Keller."/>
       </a> 
-      <a class="lightbox" href="images/gallery/navyPortrait-lg.jpg">
+      <a class="lightbox career" href="images/gallery/navyPortrait-lg.jpg">
         <img src="images/gallery/navyPortrait-sm.jpg"/>
       </a> 
-      <a class="lightbox" href="images/gallery/restaurant-lg.jpg" >
+      <a class="lightbox career" href="images/gallery/restaurant-lg.jpg" >
         <img src="images/gallery/restaurant-sm.jpg" alt="Pat (Marian's roommate, far left) and Marian, out to dinner with recovering sailors from St. Albans Hospital, NY."/>
       </a> 
-      <a class="lightbox" href="images/gallery/onTheSteps-lg.jpg">
+      <a class="lightbox career" href="images/gallery/onTheSteps-lg.jpg">
         <img src="images/gallery/onTheSteps-sm.jpg"/>
       </a>
+      <a class="lightbox career" href="images/gallery/outsideDorms-lg.jpg">
+        <img src="images/gallery/outsideDorms-sm.jpg"/>
+      </a>
+      <a class="lightbox career" href="images/gallery/id-card-lg.jpg">
+        <img src="images/gallery/id-card-sm.jpg"/>
+      </a>
+      <a class="lightbox etc" href="images/gallery/gals-lg.jpg">
+        <img src="images/gallery/gals-sm.jpg"/>
+      </a>
+      <a class="lightbox career etc" href="images/gallery/bars-lg.jpg">
+        <img src="images/gallery/bars-sm.jpg"/>
+      </a>
+      <a class="lightbox career" href="images/gallery/onTheJob-lg.jpg">
+        <img src="images/gallery/onTheJob-sm.jpg"/>
+      </a>
+      <a class="lightbox grandkids" href="images/gallery/withSarah-lg.jpg">
+        <img src="images/gallery/withSarah-sm.jpg"/>
+      </a>
+
     </div>
 
   </main>
@@ -90,14 +110,51 @@
 <script src="js/featherlight/release/featherlight.min.js"></script>
 <script src="js/featherlight/src/featherlight.gallery.js"></script>
 <script>
+  function applyGallery(){
     $('.lightbox').featherlightGallery({
-    gallery: {
-      fadeIn: 300,
-      fadeOut: 300
-    },
-    openSpeed:    300,
-    closeSpeed:   300
-  });
+      gallery: {
+        fadeIn: 300,
+        fadeOut: 300
+      },
+      openSpeed:    300,
+      closeSpeed:   300
+    });    
+  }
+
+    $('document').ready(function(){
+      applyGallery();
+
+      var unfiltered = $('.gallery a');
+      $('#filter-career').on('click', function(){
+        var filtered = unfiltered.filter('.career');
+        $('.gallery').html(filtered);
+        applyGallery();
+      });
+
+      $('#filter-grandkids').on('click', function(){
+        var filtered = unfiltered.filter('.grandkids');
+        $('.gallery').html(filtered);
+        applyGallery();
+      });
+
+      $('#filter-family').on('click', function(){
+        var filtered = unfiltered.filter('.family');
+        $('.gallery').html(filtered);
+        applyGallery();
+      });
+
+      $('#filter-etc').on('click', function(){
+        var filtered = unfiltered.filter('.etc');
+        $('.gallery').html(filtered);
+        applyGallery();
+      });        
+
+      $('#filter-none').on('click', function(){
+        $('.gallery').html(unfiltered);
+        applyGallery();
+      });  
+
+    })
 </script>
 </body>
 </html>
