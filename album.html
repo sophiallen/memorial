@@ -109,38 +109,6 @@
 
 <script src="js/featherlight/release/featherlight.min.js"></script>
 <script src="js/featherlight/src/featherlight.gallery.js"></script>
-<script>
-  function applyGallery(){
-    $('.lightbox').featherlightGallery({
-      gallery: {
-        fadeIn: 300,
-        fadeOut: 300
-      },
-      openSpeed:    300,
-      closeSpeed:   300
-    });    
-  }
-
-    $('document').ready(function(){
-      applyGallery();
-    
-      var unfiltered = $('.gallery a'); 
-      
-       $(".subnav a").click(function(event) {
-         $('.subnav li a.current').removeClass('current');
-         $(event.target).addClass('current');
-         
-         if (event.target.id === 'none'){
-           $('.gallery').html(unfiltered);
-         } else {
-           var className = '.' + event.target.id;
-           var filtered = unfiltered.filter(className);
-           $('.gallery').html(filtered);          
-         }
-         applyGallery();
-       });
-
-    });
-</script>
+<script src="js/album.js"></script>
 </body>
 </html>

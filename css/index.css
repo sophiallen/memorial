@@ -1,302 +1,306 @@
 html {
-	margin: 0;
-	padding: 0;
-	background-color: gainsboro;
-	background-image: url('../images/flowersbythesea.jpg');
-	background-size: cover;
-	background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  background-color: gainsboro;
+  background-image: url('../images/flowersbythesea.jpg');
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 body {
-	margin: 0;
-	margin-bottom: 100px;
-	min-height: 570px;
+  margin: 0;
+  margin-bottom: 100px;
+  min-height: 570px;
 }
 
 nav {
-	height: 2em;
-	font-size: 1.25em;
-	margin: 0;
-	padding: 6px;
-	line-height: 2;
-	font-family: 'Raleway', calibri;
+  height: 2em;
+  font-size: 1.25em;
+  margin: 0;
+  padding: 6px;
+  line-height: 2;
+  font-family: 'Raleway', calibri;
 }
 
 nav ul {
-	list-style: none;
-	float: right;
-	text-align: center;
-	margin: 0;
-	padding: 0;
+  list-style: none;
+  float: right;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
-	display: inline-block;
-	padding-right: 8px;
+  display: inline-block;
+  padding-right: 8px;
 }
 
 nav a, .subnav a {
-	margin: 0;
-	text-decoration: none;
-	color: black;
-	display: block;
+  margin: 0;
+  text-decoration: none;
+  color: black;
+  display: block;
 }
 
-nav a:hover, nav a.current, .subnav a:hover, .subnav a.current{
-	font-weight: bold;
-	border-bottom: 2px solid black;
+nav a:hover, nav a.current{
+  font-weight: bold;
+  border-bottom: 2px solid black;
 }
 
 main {
-	margin: 1em auto;
-	width: 75%;
-	padding: 2em;
-	padding-top: 0;
-	border-radius: 10px;
+  margin: 1em auto;
+  width: 75%;
+  padding: 2em;
+  padding-top: 0;
+  border-radius: 10px;
 }
 
 h1, h2, h3, h4 {
-	font-family: 'Parisienne', calibri;
+  font-family: 'Parisienne', calibri;
 }
 
 h1 {
-	text-align: center;
-	margin-top:.25em;
-	font-size: 3em;
+  text-align: center;
+  margin-top:.25em;
+  font-size: 3em;
 }
 
 h2 {
-	font-size: 2em;
+  font-size: 2em;
 }
 
 p {
-	font-family: 'Raleway', calibri;
-	line-height: 1.5;
+  font-family: 'Raleway', calibri;
+  line-height: 1.5;
 }
 
 .slideshow {
-	max-width: 350px;
-	margin: 0 auto;
-	border: 20px solid white;
-	background-color: white;
-	box-shadow: 0px 0 10px 1px rgba(51,51,51,.3);
+  max-width: 350px;
+  margin: 0 auto;
+  border: 20px solid white;
+  background-color: white;
+  box-shadow: 0px 0 10px 1px rgba(51,51,51,.3);
 }
 
 div.fotorama_stage_shaft, div.fotorama {
-	background-color: white;
+  background-color: white;
 }
 
 div.row {
-	display: flex;
+  display: flex;
 }
 
 div.col.aside {
-	flex: 1;
-	flex-direction: column;
-	display: flex;
-	justify-content: center;
+  flex: 1;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
 }
 
 div.col.aside div.button {
-	padding: 1em;
-	margin: 1em;
+  padding: 1em;
+  margin: 1em;
 }
 
 div.col.center {
-	flex: 2;
+  flex: 2;
 }
 
 
 /**INNER INFO PAGES**/
 
 main.inner {
-	background-color: white;
-	/*background-color: rgba(256,256,256,.95)*/;
-	border-radius: 0px;
-	padding-top: 1em;
-	margin-bottom: 2em;
-	overflow: hidden;
+  background-color: white;
+  /*background-color: rgba(256,256,256,.95)*/;
+  border-radius: 0px;
+  padding-top: 1em;
+  margin-bottom: 2em;
+  overflow: hidden;
 }
 
 main.inner h2 {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 main.inner img {
-	max-width: 300px;
-	display: inline-block;
-	margin-right: 1em;
-	margin-bottom: 1em;
-	float: left;
+  max-width: 300px;
+  display: inline-block;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  float: left;
 }
 
 main.inner p {
-	line-height: 1.5;
-	margin-top: 0;
+  line-height: 1.5;
+  margin-top: 0;
 }
 
 /**GALLERY**/
 
 div.gallery {
-	overflow: hidden;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	margin-top: 1em;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1em;
 }
 
 main.inner div.gallery img {
-	margin: 1em;
-	max-width: 500px;
+  margin: 1em;
+  max-width: 500px;
 }
 
 ul.subnav {
-	list-style: none;
-	font-family: 'Raleway', calibri;
-	text-align: center;
-	width: 50%;
-	display: block;
-	margin: 0 auto;
-	padding: 0;
+  list-style: none;
+  font-family: 'Raleway', calibri;
+  text-align: center;
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .subnav li {
-	display: inline-block;
-	text-align: center;
-	padding: .75em;
+  display: inline-block;
+  text-align: center;
+  padding: .75em;
+}
+
+.subnav li a:hover, .subnav li a.current {
+  font-weight: bold;
 }
 
 .caption {
-	font-style: italic;
-	max-width: 550px;
-	margin: 0 auto;
-	font-family: 'Raleway', calibri;
-	margin-top: 1em;
-	text-align: center;
+  font-style: italic;
+  max-width: 550px;
+  margin: 0 auto;
+  font-family: 'Raleway', calibri;
+  margin-top: 1em;
+  text-align: center;
 }
 
 /**MEMORIES PAGE**/
 div.memory-contain {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 div.memory {
-	max-width: 55%;
-	min-height: 200px;
-	display: inline-block;
-	background-color: rgba(238, 225, 191, 0.75);
-/*	background-image: url('../images/paperBg4.jpg');
-*/	margin: 1em;
-	padding: 1em 2em;
+  max-width: 55%;
+  min-height: 200px;
+  display: inline-block;
+  background-color: rgba(238, 225, 191, 0.75);
+/*  background-image: url('../images/paperBg4.jpg');
+*/  margin: 1em;
+  padding: 1em 2em;
 }
 
 div.memory-sm {
-	max-width: 300px;
+  max-width: 300px;
 }
 
 .memory-contain .memory h2 {
-	margin-top: 0.25em;
-	margin-bottom: 0em;
+  margin-top: 0.25em;
+  margin-bottom: 0em;
 }
 
 .memory-contain div.flipPhoto {
-	margin: 1em;
+  margin: 1em;
 }
 
 .credit {
-	text-align: right;
+  text-align: right;
 }
 
 .centered {
-	text-align: center;
+  text-align: center;
 }
 
 /**FLIP-PHOTOS**/
 /* entire container, keeps perspective */
 .flipPhoto {
-	perspective: 1000px;
+  perspective: 1000px;
 }
-	/* flip the pane when hovered */
-	.flipPhoto.flipped .flipper {
-		transform: rotateY(180deg);
-	}
+  /* flip the pane when hovered */
+  .flipPhoto.flipped .flipper {
+    transform: rotateY(180deg);
+  }
 
 .flipPhoto.large-photo,.flipPhoto.large-photo .front,.flipPhoto.large-photo .back {
-	width: 300px;
-	height: 250px;
+  width: 300px;
+  height: 250px;
 }
 
 .flipPhoto.small-photo,.flipPhoto.small-photo .front,.flipPhoto.small-photo .back {
-	width: 175px;
-	height: 250px;
+  width: 175px;
+  height: 250px;
 }
 
 div.flipPhoto:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 /* flip speed goes here */
 .flipper {
-	transition: 0.6s;
-	transform-style: preserve-3d;
+  transition: 0.6s;
+  transform-style: preserve-3d;
 
-	position: relative;
+  position: relative;
 }
 
 /* hide back of pane during swap */
 .front, .back {
-	backface-visibility: hidden;
-	background-color: white;
-	position: absolute;
-	top: 0;
-	left: 0;
+  backface-visibility: hidden;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /* front pane, placed above back */
 .front {
-	z-index: 2;
-	/* for firefox 31 */
-	transform: rotateY(0deg);
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
 }
 
 /* back, initially hidden pane */
 .back {
-	transform: rotateY(180deg);
-	border: 1px solid gainsboro;
+  transform: rotateY(180deg);
+  border: 1px solid gainsboro;
 }
 
 .back p {
-	padding: 2em;
-	font-style: italic;
+  padding: 2em;
+  font-style: italic;
 }
 
 
 /**MEMORY FORM**/
 /*.form-contain {
-	max-width: 60%;
-	border:1px solid gainsboro;
+  max-width: 60%;
+  border:1px solid gainsboro;
 }*/
 
 form {
-	font-family: 'Raleway', Calibri;
-	max-width: 60%;
-	padding: 2em;
-	margin: 1em auto;
-	background-color: beige;
+  font-family: 'Raleway', Calibri;
+  max-width: 60%;
+  padding: 2em;
+  margin: 1em auto;
+  background-color: beige;
 }
 
 label {
-	font-weight: bold;
+  font-weight: bold;
 }
  
 form div {
-	margin-top: 1em;
+  margin-top: 1em;
 }
 
 input, textarea, select {
-	width: 96%;
-	padding: .75em;
-	font-family: 'Raleway', calibri;
+  width: 96%;
+  padding: .75em;
+  font-family: 'Raleway', calibri;
 }
