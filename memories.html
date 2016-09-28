@@ -31,9 +31,16 @@
   </nav>
   <main class="inner">
     <h1>Favorite Memories</h1>
+    <ul class="subnav">
+      <li><a href="#" id="none" class="current">All</a></li><span>&middot;</span>
+      <li><a href="#" id="story">Stories</a></li><span>&middot;</span>
+      <li><a href="#" id="recipe">Recipes</a></li><span>&middot;</span>
+      <li><a href="#" id="letter">Letters</a></li>
+<!--       <li><a href="#" id="funny">Funny</a></li>
+ -->    </ul>
     <div class="memory-contain">
 
-      <div class="flipPhoto large-photo">
+      <div class="flipPhoto large-photo story">
         <div class="flipper">
           <div class="front">
             <img class="flipPhoto" src="images/gallery/beachDance-sm.jpg"/>
@@ -46,19 +53,19 @@
       </div><!--end flipPhoto-->
 
 
-      <div class="memory">
-        <h2>Memory Title</h2>
+      <div class="memory story">
+        <h2>Sample Story Title</h2>
         <p>Here's some sample text, until a real story gets posted: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan interdum justo, sit amet ultrices est venenatis eget. Quisque euismod nec odio at tincidunt. Etiam eu purus malesuada, aliquam diam non, tincidunt lacus. </p>
         <p>Proin nec malesuada lectus. Suspendisse aliquet a ante nec vehicula. Phasellus iaculis ut erat vitae facilisis. Suspendisse porta dolor a nisi semper, quis faucibus arcu scelerisque.</p>
         <p class="credit">- Author Name, <em>relationship</em></p>
       </div>
-        <div class="memory">
-          <h2>Another Memory</h2>
-          <p>More sample text follows, waiting to be replaced. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan interdum justo, sit amet ultrices est venenatis eget. Quisque euismod nec odio at tincidunt. Etiam eu purus malesuada, aliquam diam non, tincidunt lacus. Proin nec malesuada lectus. Suspendisse aliquet a ante nec vehicula. Phasellus iaculis ut erat vitae facilisis. Suspendisse porta dolor a nisi semper, quis faucibus arcu scelerisque.</p>
+        <div class="memory recipe">
+          <h2>Sample Recipe Title</h2>
+          <p>More sample text, waiting to be replaced. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan interdum justo, sit amet ultrices est venenatis eget. Quisque euismod nec odio at tincidunt. Etiam eu purus malesuada, aliquam diam non, tincidunt lacus. Proin nec malesuada lectus. Suspendisse aliquet a ante nec vehicula. Phasellus iaculis ut erat vitae facilisis. Suspendisse porta dolor a nisi semper, quis faucibus arcu scelerisque.</p>
           <p class="credit">- Author Name, <em>relationship</em></p>
         </div>
 
-        <div class="flipPhoto small-photo">
+        <div class="flipPhoto story small-photo">
           <div class="flipper">
             <div class="front">
               <img class="flipPhoto" src="images/gallery/navyPortrait-sm.jpg"/>
@@ -86,7 +93,26 @@
       } else {
         $(this).addClass('flipped');
       }
-    })
+    });
+
+   var unfiltered = $('.memory-contain').children(); 
+   console.log('unfiltered: ' + unfiltered);
+   $(".subnav a").click(function(event) {
+      console.log('unfiltered after click: ' + unfiltered);
+     $('.subnav li a.current').removeClass('current');
+     $(event.target).addClass('current');
+     
+     if (event.target.id === 'none'){
+       $('.memory-contain').html(unfiltered);
+     } else {
+       var className = '.' + event.target.id;
+       var filtered = unfiltered.filter(className);
+       if (filtered.length == 0) {
+        filtered = "<p><br/>Sorry, nothing here yet!</p>"
+       }
+       $('.memory-contain').html(filtered);          
+     }
+   });
   </script>
 
 </body>
