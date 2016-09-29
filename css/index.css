@@ -1,16 +1,32 @@
-html {
+/*html {
   margin: 0;
   padding: 0;
   background-color: gainsboro;
-  background-image: url('../images/flowersbythesea.jpg');
+  background-image: url('../images/flowersbythesea-lg.jpg');
   background-size: cover;
   background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+}*/
+
+html { 
+  margin: 0;
+  padding: 0;
+  background: url(../images/flowersbythesea.jpg) no-repeat fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
+
+
+
 
 body {
   margin: 0;
   margin-bottom: 100px;
-  min-height: 570px;
+  min-height: 100%;
 }
 
 nav {
@@ -247,6 +263,7 @@ div.flipPhoto:hover {
   transform-style: preserve-3d;
 
   position: relative;
+
 }
 
 /* hide back of pane during swap */
@@ -304,10 +321,10 @@ div.front p {
 
 form {
   font-family: 'Raleway', Calibri;
-  max-width: 60%;
+  max-width: 920px;
   padding: 2em;
   margin: 1em auto;
-  background-color: whitesmoke;
+  background-color: white;
 }
 
 label {
@@ -330,11 +347,12 @@ button.mobile {
 
 /**CELL PHONE**/
 @media all and (max-width: 480px){
-  html {
+/*  html {
     background-attachment: initial;
-  }
+  }*/
   nav {
-    background-color: #cff0ff;
+    background-color: rgba(0,0,0,.85);
+    color: white;
     min-height: 50px;
     padding: 0;
     position: fixed;
@@ -345,8 +363,16 @@ button.mobile {
 
   nav ul {
     display: none;
-    background-color: rgb(207, 240, 255);
+    background-color: rgba(0,0,0,.85);
     padding: .5em;
+  }
+
+  nav ul li a {
+    color: white;
+  }
+
+  nav ul li a:hover, nav ul li a.current {
+    border-bottom: 2px solid white;
   }
 
   button.mobile {
@@ -355,7 +381,8 @@ button.mobile {
     font-family: 'Raleway', calibri;
     padding: .35em;
     float: right;
-    background-color: rgba(256,256,256,.5);
+    color: white;
+    background-color: transparent;
     border-radius: 5px;
     border: none;
     font-weight: bold;
