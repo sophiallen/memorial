@@ -24,6 +24,7 @@ nav {
 
 nav ul {
   list-style: none;
+  display: block;
   float: right;
   text-align: center;
   margin: 0;
@@ -86,25 +87,6 @@ div.fotorama_stage_shaft, div.fotorama {
   background-color: white;
 }
 
-div.row {
-  display: flex;
-}
-
-div.col.aside {
-  flex: 1;
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-}
-
-div.col.aside div.button {
-  padding: 1em;
-  margin: 1em;
-}
-
-div.col.center {
-  flex: 2;
-}
 
 
 /**INNER INFO PAGES**/
@@ -168,6 +150,7 @@ ul.subnav {
 
 .subnav li a:hover, .subnav li a.current {
   font-weight: bold;
+  cursor: pointer;
 }
 
 .caption {
@@ -179,11 +162,28 @@ ul.subnav {
   text-align: center;
 }
 
+.suggest {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 /**MEMORIES PAGE**/
 div.memory-contain {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.memory-contain div.row {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div.row.wrap-reverse {
+  flex-wrap: wrap-reverse;
 }
 
 div.memory {
@@ -265,6 +265,11 @@ div.flipPhoto:hover {
   transform: rotateY(0deg);
 }
 
+#dancing {
+  background-image: url('../images/gallery/beachDance-sm.jpg');
+  background-size: cover;
+}
+
 /* back, initially hidden pane */
 .back {
   transform: rotateY(180deg);
@@ -272,9 +277,23 @@ div.flipPhoto:hover {
 }
 
 .back p {
-  padding: 2em;
+  padding: 1.5em;
   font-style: italic;
 }
+
+.back span.right {
+  float: right;
+}
+
+div.front p {
+    position: relative;
+    background-color: rgba(256,256,256,.80);
+    font-weight: bold;
+    padding: .5em;
+    top: 75%;
+    text-align: right;
+}
+
 
 
 /**MEMORY FORM**/
@@ -288,7 +307,7 @@ form {
   max-width: 60%;
   padding: 2em;
   margin: 1em auto;
-  background-color: beige;
+  background-color: whitesmoke;
 }
 
 label {
@@ -303,4 +322,85 @@ input, textarea, select {
   width: 96%;
   padding: .75em;
   font-family: 'Raleway', calibri;
+}
+
+button.mobile {
+  display: none;
+}
+
+/**CELL PHONE**/
+@media all and (max-width: 480px){
+  html {
+    background-attachment: initial;
+  }
+  nav {
+    background-color: #cff0ff;
+    min-height: 50px;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:100;
+  }
+
+  nav ul {
+    display: none;
+    background-color: rgb(207, 240, 255);
+    padding: .5em;
+  }
+
+  button.mobile {
+    display: block;
+    margin: 3px;
+    font-family: 'Raleway', calibri;
+    padding: .35em;
+    float: right;
+    background-color: rgba(256,256,256,.5);
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    font-size: 1.15em;
+  }
+  main {
+    width: 95%;
+    padding: 1em;
+  }
+
+  h1.page-title {
+    background-color: rgba(256,256,256,.95);
+    margin-top: 1em;
+    padding: .25em;
+  }
+
+  main.inner {
+    width: 80%;
+    padding: 1em;
+    margin-top: 65px;
+  }
+
+  main.inner img {
+    max-width: 100%;
+  }
+  .memory-contain div.flipPhoto {
+    margin: 1em 0;
+  }
+
+  div.memory {
+    max-width: 95%;
+    margin: 1em 0;
+  }
+
+  .flipPhoto .front, .flipPhoto .back {
+    width: auto;
+  }
+
+  .flipPhoto.large-photo .front, .flipPhoto.large-photo .back, .flipPhoto.large-photo {
+    width: 100%;
+  }
+
+  form {
+    max-width: 100%;
+    margin-top: 2em;
+    padding-top: 1em;
+  }
 }

@@ -23,6 +23,7 @@
 </head>
 <body>
   <nav>
+    <button class="mobile">Menu</button>
     <ul>
       <li><a href="biography.html">Biography</a></li>
       <li><a href="album.html">Photo Album</a></li>
@@ -31,7 +32,7 @@
     </ul>
   </nav>
   <main>
-    <h1>Julia Marian  Blaszcak</h1>
+    <h1 class="page-title">Julia Marian  Blaszcak</h1>
     <div class="slideshow">
         <div class="fotorama"
          data-arrows="false" data-autoplay="6000" 
@@ -48,6 +49,11 @@
 
 <!-- 1. Link to jQuery (1.8 or later), -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+      $('button.mobile').on('click', function(){
+      $('nav ul').slideToggle();
+    });
+</script>
 <script src="js/fotorama/fotorama.js"></script> <!-- 16 KB -->
 </body>
 </html>

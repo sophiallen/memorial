@@ -23,6 +23,7 @@
 </head>
 <body>
   <nav>
+    <button class="mobile">Menu</button>
     <ul>
       <li><a href="index.html">Main</a></li>
       <li><a href="#" class="current">Biography</a></li>
@@ -50,5 +51,12 @@
     <h2>Legacy</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan interdum justo, sit amet ultrices est venenatis eget. Quisque euismod nec odio at tincidunt. Etiam eu purus malesuada, aliquam diam non, tincidunt lacus. Proin nec malesuada lectus. Suspendisse aliquet a ante nec vehicula. Phasellus iaculis ut erat vitae facilisis. Suspendisse porta dolor a nisi semper, quis faucibus arcu scelerisque.</p>
   </main>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript">
+      $('button.mobile').on('click', function(){
+      $('nav ul').slideToggle();
+    });
+</script>
 </body>
 </html>

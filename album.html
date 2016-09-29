@@ -25,6 +25,7 @@
 </head>
 <body>
   <nav>
+   <button class="mobile">Menu</button>
     <ul>
       <li><a href="index.html">Main</a></li>
       <li><a href="biography.html">Biography</a></li>
@@ -36,11 +37,11 @@
   <main class="inner">
     <h1>Photo Album</h1>
     <ul class="subnav">
-      <li><a href="#" id="none" class="current">All</a></li><span>&middot;</span>
-      <li><a href="#" id="career">Career</a></li><span>&middot;</span>
-      <li><a href="#" id="family">Family Life</a></li><span>&middot;</span>
-      <li><a href="#" id="grandkids">Grandchildren</a></li><span>&middot;</span>
-      <li><a href="#" id="etc">Et Cetera</a></li>
+      <li><a  id="none" class="current">All</a></li><span>&middot;</span>
+      <li><a  id="career">Career</a></li><span>&middot;</span>
+      <li><a  id="family">Family Life</a></li><span>&middot;</span>
+      <li><a  id="grandkids">Grandchildren</a></li><span>&middot;</span>
+      <li><a id="etc">Et Cetera</a></li>
     </ul>
 
     <div class="gallery">
@@ -100,13 +101,20 @@
       </a>
 
     </div>
-
+    <div class="suggest">
+      <h2>Have a photo you'd like to add?</h2>
+      <p>That's great! For now, the best way to upload photos is by emailing them  as .jpg or .pdf files to <a href="mailto:soph.m.allen@gmail.com">soph.m.allen@gmail.com</a>. Explain any special instructions (captions, categories, etc) in the body of your email. Thank you!</p>
+    </div>
   </main>
 
 
 <!-- 1. Link to jQuery (1.7 or later), -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
+<script type="text/javascript">
+      $('button.mobile').on('click', function(){
+      $('nav ul').slideToggle();
+    });
+</script>
 <script src="js/featherlight/release/featherlight.min.js"></script>
 <script src="js/featherlight/src/featherlight.gallery.js"></script>
 <script src="js/album.js"></script>

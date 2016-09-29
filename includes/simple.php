@@ -42,7 +42,7 @@ if ($response != null && $response->success)
     <main class="inner">
         <h1>Thank You!</h1>
         <p>Your contribution has been sent. Please be patient while our webmaster (i.e. Sophie) adds your stories and suggestions to the site.</p>
-        <p>If you have a pressing concern, or spot a bug in the website, please let Sophie know by <a href="mailto:soph.m.allen@gmail.com" target="_top">sending her an email</a>. Thanks!</p>
+        <p>If you have a pressing concern, or spot a bug in the website, please let Sophie know by <a href="mailto:soph.m.allen@gmail.com">sending her an email</a>. Thanks!</p>
         <p>Click <a href="index.html">here</a> to return to Julia's home page.</p>
     </main>    
     <!-- END HTML FEEDBACK -->        

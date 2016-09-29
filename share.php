@@ -23,6 +23,7 @@
 </head>
 <body>
   <nav>
+    <button class="mobile">Menu</button>
     <ul>
       <li><a href="index.html">Main</a></li>
       <li><a href="biography.html">Biography</a></li>
@@ -36,5 +37,11 @@
         <?php include 'includes/simple.php';?> 
     </div>
   </main>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript">
+      $('button.mobile').on('click', function(){
+      $('nav ul').slideToggle();
+    });
+</script>
 </body>
 </html>
