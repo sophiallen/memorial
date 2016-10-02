@@ -1,14 +1,3 @@
-/*html {
-  margin: 0;
-  padding: 0;
-  background-color: gainsboro;
-  background-image: url('../images/flowersbythesea-lg.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  height: 100%;
-  width: 100%;
-}*/
-
 html { 
   margin: 0;
   padding: 0;
@@ -18,10 +7,6 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
-
-
-
-
 
 body {
   margin: 0;
@@ -69,7 +54,6 @@ main {
   width: 75%;
   padding: 2em;
   padding-top: 0;
-  border-radius: 10px;
 }
 
 h1, h2, h3, h4 {
@@ -91,6 +75,8 @@ p {
   line-height: 1.5;
 }
 
+/**Blueberry Photo Slider**/
+
 .slideshow {
   max-width: 350px;
   margin: 0 auto;
@@ -104,13 +90,10 @@ div.fotorama_stage_shaft, div.fotorama {
 }
 
 
-
 /**INNER INFO PAGES**/
 
 main.inner {
   background-color: white;
-  /*background-color: rgba(256,256,256,.95)*/;
-  border-radius: 0px;
   padding-top: 1em;
   margin-bottom: 2em;
   overflow: hidden;
@@ -120,6 +103,7 @@ main.inner h2 {
   margin-bottom: 0;
 }
 
+/**For bio page, primarily**/
 main.inner img {
   max-width: 300px;
   display: inline-block;
@@ -129,12 +113,15 @@ main.inner img {
 }
 
 main.inner p {
-  line-height: 1.5;
   margin-top: 0;
 }
 
 /**GALLERY**/
 
+/*div where photos will display, 
+flexed for responsivity. Note: 
+works best when image thumbnails
+are of uniform height.*/
 div.gallery {
   overflow: hidden;
   display: flex;
@@ -178,6 +165,7 @@ ul.subnav {
   text-align: center;
 }
 
+/*For 'add a photo/memory' section at page bottom*/
 .suggest {
   max-width: 600px;
   margin: 0 auto;
@@ -198,22 +186,19 @@ div.memory-contain {
     justify-content: center;
 }
 
-div.row.wrap-reverse {
+/*Reverse-wrap for rows where images
+ shouldn't be first in mobile view.*/
+div.row.wrap-reverse { 
   flex-wrap: wrap-reverse;
 }
 
 div.memory {
   max-width: 55%;
   min-height: 200px;
-  display: inline-block;
+  display: inline;
   background-color: rgba(238, 225, 191, 0.75);
-/*  background-image: url('../images/paperBg4.jpg');
-*/  margin: 1em;
+  margin: 1em;
   padding: 1em 2em;
-}
-
-div.memory-sm {
-  max-width: 300px;
 }
 
 .memory-contain .memory h2 {
@@ -229,23 +214,30 @@ div.memory-sm {
   text-align: right;
 }
 
-.centered {
-  text-align: center;
-}
 
 /**FLIP-PHOTOS**/
 /* entire container, keeps perspective */
 .flipPhoto {
   perspective: 1000px;
 }
-  /* flip the pane when hovered */
-  .flipPhoto.flipped .flipper {
-    transform: rotateY(180deg);
-  }
+
+/* flip the pane when .flipped class applied */
+.flipPhoto.flipped .flipper {
+  transform: rotateY(180deg);
+}
 
 .flipPhoto.large-photo,.flipPhoto.large-photo .front,.flipPhoto.large-photo .back {
   width: 300px;
   height: 250px;
+}
+
+.flipPhoto.xlarge-photo,.flipPhoto.xlarge-photo .front,.flipPhoto.xlarge-photo .back {
+  width: 450px;
+  height: 300px;
+}
+
+.flipPhoto.xlarge-photo img {
+  max-width: 450px;
 }
 
 .flipPhoto.small-photo,.flipPhoto.small-photo .front,.flipPhoto.small-photo .back {
@@ -261,9 +253,7 @@ div.flipPhoto:hover {
 .flipper {
   transition: 0.6s;
   transform-style: preserve-3d;
-
   position: relative;
-
 }
 
 /* hide back of pane during swap */
