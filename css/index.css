@@ -130,6 +130,10 @@ div.gallery {
   margin-top: 1em;
 }
 
+ul.subnav.family-nav {
+  display: none;
+}
+
 main.inner div.gallery img {
   margin: 1em;
   max-width: 500px;
@@ -139,7 +143,6 @@ ul.subnav {
   list-style: none;
   font-family: 'Raleway', calibri;
   text-align: center;
-  width: 50%;
   display: block;
   margin: 0 auto;
   padding: 0;
@@ -181,7 +184,6 @@ div.memory-contain {
 
 .memory-contain div.row {
     display: flex;
-    align-items: flex-end;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -190,6 +192,7 @@ div.memory-contain {
  shouldn't be first in mobile view.*/
 div.row.wrap-reverse { 
   flex-wrap: wrap-reverse;
+  align-items: flex-end;
 }
 
 div.memory {
@@ -238,6 +241,11 @@ div.memory {
 
 .flipPhoto.xlarge-photo img {
   max-width: 450px;
+}
+
+.flipPhoto.square-photo,.flipPhoto.square-photo .front,.flipPhoto.square-photo .back {
+  width: 250px;
+  height: 250px;
 }
 
 .flipPhoto.small-photo,.flipPhoto.small-photo .front,.flipPhoto.small-photo .back {
