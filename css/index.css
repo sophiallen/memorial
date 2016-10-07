@@ -304,6 +304,18 @@ div.flipPhoto:hover {
   background-size: cover;
 }
 
+#birthday {
+  background-image: url('../images/gallery/GrandmaBirthday-sm.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#jacuzzi {
+  background-size: cover;
+  background-position: center;
+  background-image: url('../images/gallery/jacuzzi.jpg');
+}
+
 /* back, initially hidden pane */
 .back {
   transform: rotateY(180deg);
