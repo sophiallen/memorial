@@ -80,10 +80,16 @@ if ($response != null && $response->success)
 		</label>
 	</div>	
     <div>
+        <label>(Optional) Title for your memory/story?
+            <input type="text" name="title"/>
+        </label>
+    </div>
+    <div>
         <label>
             How should we categorize your contribution?<br/>
             <select name="Category">
                 <option value="memory">Memory/Story</option>
+                <option value="rememberance">Rememberance / Memorial</option>
                 <option value="biography">Biographical Information</option>
                 <option value="recipe">Recipe</option>
                 <option value="other">Other (specify in instructions below)</option>

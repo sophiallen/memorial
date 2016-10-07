@@ -207,11 +207,9 @@ div.memory {
 div.memory a {
   cursor: pointer;
   font-family: 'Raleway', calibri;
-}
-
-div.memory a:hover {
   font-weight: bold;
 }
+
  
 div.memory.large {
   max-width: 88%;
