@@ -204,6 +204,23 @@ div.memory {
   padding: 1em 2em;
 }
 
+div.memory a {
+  cursor: pointer;
+  font-family: 'Raleway', calibri;
+}
+
+div.memory a:hover {
+  font-weight: bold;
+}
+ 
+div.memory.large {
+  max-width: 88%;
+}
+
+div.memory .flipPhoto {
+  float: left;
+}
+
 .memory-contain .memory h2 {
   margin-top: 0.25em;
   margin-bottom: 0em;
@@ -215,6 +232,10 @@ div.memory {
 
 .credit {
   text-align: right;
+}
+
+.toggleDisplay {
+  display: none;
 }
 
 
